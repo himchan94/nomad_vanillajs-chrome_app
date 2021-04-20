@@ -1,9 +1,29 @@
-const title = document.getElementById("title");
+const title = document.querySelector("#title");
 
-// title.innerHTML = "고쳤다";
+const BASE_COLOR = "yellow"
+const OTHER_COLOR = "grey";
 
-console.dir(title);
+function handleClick() {
+    const currentColor = title.style.color;
+    if (currentColor === BASE_COLOR) {
+        title.style.color = OTHER_COLOR;
+    } else if (currentColor === OTHER_COLOR) {
+        title.style.color = BASE_COLOR;
+    };
+};
 
-// DOM Document Object Model
-// 자바스크립트는 html에 있는 모든 요소를 가지고 온다
-// 그걸 객체로 바꿔준다
+function init() {
+    title.style.color = BASE_COLOR;
+    title.addEventListener("click", handleClick);
+
+};
+
+init();
+
+function handleOffline() {
+    console.log("hi");
+
+};
+
+window.addEventListener("offline", handleOffline);
+
