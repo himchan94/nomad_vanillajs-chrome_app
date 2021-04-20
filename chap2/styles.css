@@ -3,8 +3,22 @@ body {
   color: red;
 }
 
+h1 {
+    color:blueviolet;
+    transition: color .5s ease-in-out;
+}
 
-/* 아이디 선택할떄# */
-#title {
-  color: blue;
+.clicked {
+    color:darkblue
+}
+.btn{
+    cursor: pointer;
+}
+
+.form, .greetings {
+    display: none;
+}
+
+.showing{
+    display: block;
 }
